@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://developedbyakia.com/sitemap.xml
