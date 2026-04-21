@@ -434,7 +434,8 @@
   transform: translateY(-6px);
   box-shadow: 0 12px 40px rgba(26, 23, 20, 0.1);
 }
-.card--teal {
+.card--teal,
+.card--steel {
   border-top: 4px solid var(--color-primary);
 }
 .card--berry {
@@ -451,7 +452,8 @@
 .card--dark:hover {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
-.card--dark.card--teal {
+.card--dark.card--teal,
+.card--dark.card--steel {
   border-top: 4px solid var(--color-primary);
 }
 .card--dark.card--berry {
@@ -617,7 +619,8 @@
 /* ==========================================
    DIVIDER
    ========================================== */
-.divider-teal {
+.divider-teal,
+.divider-steel {
   border: none;
   border-top: 1px solid var(--color-primary);
   margin: 2.5rem 0;
