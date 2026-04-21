@@ -996,3 +996,227 @@ select:focus {
   outline: 3px solid var(--color-primary);
   outline-offset: 0;
 }
+
+.services-teaser-layout {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.services-teaser-left {
+  position: sticky;
+  top: 6rem;
+}
+
+.teaser-packages {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-parchment-dark);
+}
+
+.teaser-package-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--color-parchment-dark);
+  transition: padding-left 0.2s ease;
+}
+
+.teaser-package-row:hover {
+  padding-left: 0.75rem;
+}
+
+.teaser-package-name {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--color-dark);
+}
+
+.teaser-package-price {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-text-muted-light);
+  letter-spacing: 0.05em;
+}
+
+.teaser-package-row--featured .teaser-package-name {
+  color: var(--color-berry);
+}
+
+.teaser-package-row--featured .teaser-package-price {
+  color: var(--color-berry);
+}
+
+@media (max-width: 768px) {
+  .services-teaser-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .services-teaser-left {
+    position: static;
+  }
+}
+
+.service-row {
+  border-top: 1px solid var(--color-parchment-dark);
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.service-row:last-of-type {
+  border-bottom: 1px solid var(--color-parchment-dark);
+}
+
+.service-row--featured {
+  background: var(--color-dark);
+  color: var(--color-text-on-dark);
+  padding: 3rem;
+  border-radius: var(--radius-md);
+  border-top: none;
+  margin: 1rem 0;
+}
+
+.service-row--featured .service-row__for {
+  color: var(--color-parchment);
+}
+
+.service-row--premium {
+  background: var(--color-berry);
+  color: var(--color-white);
+  padding: 3rem;
+  border-radius: var(--radius-md);
+  border-top: none;
+  margin: 1rem 0;
+}
+
+.service-row--premium .service-row__for {
+  color: rgba(245,237,216,0.9);
+}
+
+.service-row--premium .service-row__includes li {
+  color: rgba(245,237,216,0.8);
+}
+
+.service-row--premium .service-row__includes li::before {
+  color: var(--color-parchment);
+}
+
+.service-row__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.service-row__meta {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.service-row__number {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-amber);
+  letter-spacing: 0.1em;
+}
+
+.service-row__name {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-style: italic;
+  color: var(--color-dark);
+  font-weight: 400;
+}
+
+.service-row--featured .service-row__name,
+.service-row--premium .service-row__name {
+  color: var(--color-parchment);
+}
+
+.service-row__price {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--color-text-muted-light);
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.service-row--featured .service-row__price,
+.service-row--premium .service-row__price {
+  color: var(--color-parchment);
+  opacity: 0.7;
+}
+
+.service-row__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.service-row__for {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--color-dark);
+  line-height: 1.5;
+}
+
+.service-row__note {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-steel);
+  letter-spacing: 0.05em;
+  margin-top: 1.5rem;
+}
+
+.service-row__includes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.service-row__includes li {
+  font-size: 0.875rem;
+  color: var(--color-text-muted-light);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.service-row__includes li::before {
+  content: '//';
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--color-amber);
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+}
+
+.service-row__cta {
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .service-row__body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .service-row__name {
+    font-size: 1.75rem;
+  }
+  .service-row__header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
